@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site" method="upgrade">
+	<name>MD18 Lastest News</name>
+	<creationDate>March 2016</creationDate>
+	<copyright>Copyright (C) 2016 md18.com.br, All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>1.0.0</version>
+	<description>
+        <![CDATA[
+        ]]>
+    </description>
+	<files>
+		<filename module="mod_md18_lastestnews">mod_md18_lastestnews.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+        <filename>mod_md18_lastestnews.xml</filename>
+	</files>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_LOGIN" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+	            <field name="catid" type="category" extension="com_content" multiple="false" size="1" default="0" label="JCATEGORY" description="MOD_LATEST_NEWS_FIELD_CATEGORY_DESC" >
+				    <option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+	            <field name="textlength" type="text" default="200" filter="safehtml" label="Intro Text Length" description="Please Enter Intro Text Length" class="inputbox" />
+	            <field name="items_toshow" type="integer" default="4" label="Número de slides" description="" first="1" last="5" step="1" />
+	            <field name="items_maxlimit" type="text" default="10" filter="safehtml" label="Máximo de items" description="Máximo de items a serem carregados pelo banco de dados." class="inputbox" />
+	            <field name="navigation" type="radio" default="1" label="Show Navigation" description="Please Select Yes or No For Navigation." class="btn-group">
+				    <option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
+				<field name="intro" label ="Texto de Introdução" type="textarea" filter="safehtml" rows="10" cols="80" />
+			</fieldset>
+            <fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,52 @@
+
+.md18-lastestnews {
+  overflow: hidden;}
+
+  .md18-lastestnews .owl-carousel {
+    max-width: 1200px;
+    margin: 0 auto 60px;}
+
+    .md18-lastestnews .owl-carousel .item {
+      padding: 1px 10px;}
+
+    .md18-lastestnews .owl-carousel .item .item-picture {
+      outline: 1px solid #FCB812;
+      border: 5px solid #fff;}
+
+    .md18-lastestnews .owl-carousel .item .item-title {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+      font-style: italic;
+      color: #666;
+      letter-spacing: 0;
+      margin-top: 16px;
+      margin-bottom: 16px;}
+
+      .md18-lastestnews .owl-carousel .item .item-title a {
+        text-decoration: none;
+        font-weight: inherit;}
+
+    .md18-lastestnews .owl-carousel .item .item-date {
+      font-size: 14px;
+      font-style: italic;
+      color: #888;}
+    
+      .md18-lastestnews .owl-carousel .item .item-content p {
+        font-size: 16px;
+        line-height: 1.5;}
+
+
+  .md18-lastestnews .owl-theme .owl-controls .owl-buttons div {
+    background: url(../images/arrows.png) no-repeat top left;
+    width:25px;
+    height: 38px;
+  }
+
+    .md18-lastestnews .owl-theme .owl-controls .owl-buttons div.owl-next {
+      background-position: top right;
+  }
+
+  
+
+	
