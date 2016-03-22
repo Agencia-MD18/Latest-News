@@ -29,7 +29,7 @@ class modMD18LastNewsHelper
 		return $options;
 	}
 
-	static function getLink($row) {
+	static function getLink($row, $menuitem) {
 		
 		$link = '';
         $urls = json_decode($row->urls);
@@ -38,11 +38,11 @@ class modMD18LastNewsHelper
         if(!$link) {
             $route = ContentHelperRoute::getArticleRoute($row->id, $row->catid, JFactory::getLanguage()->getTag());
 
-			$menu = JSite::getMenu();
-			$menuItem = $menu->getItems( 'link', $route, true );
-			$Itemid = $menuItem->id;
+            $app = JFactory::getApplication();
+			$menu = $app->getMenu();
+			$Itemid = $menu->getItem( $menuitem );
 
-            $link = JRoute::_($route . '&Itemid=' . $Itemid);
+            $link = JRoute::_($route . '&Itemid=' . $Itemid->id);
         }
 
         return $link;

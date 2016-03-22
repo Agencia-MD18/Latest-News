@@ -10,11 +10,11 @@
         ]]>
     </description>
 	<files>
-		<filename module="mod_md18_lastestnews">mod_md18_lastestnews.php</filename>
+		<filename module="mod_md18_latestnews">mod_md18_latestnews.php</filename>
 		<folder>tmpl</folder>
 		<filename>helper.php</filename>
 		<filename>index.html</filename>
-        <filename>mod_md18_lastestnews.xml</filename>
+        <filename>mod_md18_latestnews.xml</filename>
 	</files>
 	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_LOGIN" />
 	<config>
@@ -23,6 +23,7 @@
 	            <field name="catid" type="category" extension="com_content" multiple="false" size="1" default="0" label="JCATEGORY" description="MOD_LATEST_NEWS_FIELD_CATEGORY_DESC" >
 				    <option value="">JOPTION_ALL_CATEGORIES</option>
 				</field>
+				<field name="menuitem" type="menuitem" default="45" label="Select a menu item" description="Select a menu item" />
 	            <field name="textlength" type="text" default="200" filter="safehtml" label="Intro Text Length" description="Please Enter Intro Text Length" class="inputbox" />
 	            <field name="items_toshow" type="integer" default="4" label="Número de slides" description="" first="1" last="5" step="1" />
 	            <field name="items_maxlimit" type="text" default="10" filter="safehtml" label="Máximo de items" description="Máximo de items a serem carregados pelo banco de dados." class="inputbox" />

@@ -5,12 +5,13 @@ $textlength         =       $params->get( 'textlength', 100 );
 $navigation         =       $params->get( 'navigation', 1 ) == 1 ? 'true' : 'false';
 $items_toshow       =       $params->get( 'items_toshow', 4);
 $intro              =       $params->get( 'intro', '' );
+$menuitem           =       $params->get( 'menuitem', '' );
 
 ?>
 
-<link rel="stylesheet" type="text/css" href="modules/mod_md18_lastestnews/tmpl/css/md18_lastestnews.css" />
+<link rel="stylesheet" type="text/css" href="modules/mod_md18_latestnews/tmpl/css/md18_latestnews.css" />
 
-<div id="md18_lastnews" class="md18-lastestnews">
+<div id="md18_lastnews" class="md18-latestnews">
     
     <?php /* Text of Introduction */ ?>
     <?php if ($intro) { ?>
@@ -18,9 +19,9 @@ $intro              =       $params->get( 'intro', '' );
     <?php } ?>
     
     <?php /* Carousel */ ?>
-	<div id="lastestnews-carousel" class="owl-carousel">
+	<div id="latestnews-carousel" class="owl-carousel">
     <?php for ($i = 0, $n = count($options); $i < $n; $i ++) : ?>
-        <?php $link = modMD18LastNewsHelper::getLink($options[$i]); ?>
+        <?php $link = modMD18LastNewsHelper::getLink($options[$i], $menuitem); ?>
         <div class="item">
 			
             <!-- Image -->
@@ -75,7 +76,7 @@ $intro              =       $params->get( 'intro', '' );
         
             $(document).ready(function(){
 
-                var carousel = $('#lastestnews-carousel').owlCarousel({
+                var carousel = $('#latestnews-carousel').owlCarousel({
                     items: <?php echo $items_toshow ?>,
                     navigation : <?php echo $navigation; ?>, // Show next and prev buttons
                     slideSpeed : 300,
