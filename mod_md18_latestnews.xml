@@ -20,18 +20,22 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-	            <field name="catid" type="category" extension="com_content" multiple="false" size="1" default="0" label="JCATEGORY" description="MOD_LATEST_NEWS_FIELD_CATEGORY_DESC" >
+	            <field name="catid" type="category" extension="com_content" multiple="true" size="5" default="0" label="JCATEGORY" description="MOD_LATEST_NEWS_FIELD_CATEGORY_DESC" >
 				    <option value="">JOPTION_ALL_CATEGORIES</option>
 				</field>
-				<field name="menuitem" type="menuitem" default="45" label="Select a menu item" description="Select a menu item" />
 	            <field name="textlength" type="text" default="200" filter="safehtml" label="Intro Text Length" description="Please Enter Intro Text Length" class="inputbox" />
-	            <field name="items_toshow" type="integer" default="4" label="Número de slides" description="" first="1" last="5" step="1" />
+	            <field name="items_toshow" type="integer" default="4" label="Número de slides" description="" first="1" last="6" step="1" />
 	            <field name="items_maxlimit" type="text" default="10" filter="safehtml" label="Máximo de items" description="Máximo de items a serem carregados pelo banco de dados." class="inputbox" />
 	            <field name="navigation" type="radio" default="1" label="Show Navigation" description="Please Select Yes or No For Navigation." class="btn-group">
 				    <option value="0">JNo</option>
 					<option value="1">JYes</option>
 				</field>
+				<field name="pagination" type="radio" default="1" label="Show Pagination" description="Please Select Yes or No For Pagination." class="btn-group">
+				    <option value="0">JNo</option>
+					<option value="1">JYes</option>
+				</field>
 				<field name="intro" label ="Texto de Introdução" type="textarea" filter="safehtml" rows="10" cols="80" />
+				<field name="image_default" label="Imagem de substituição" type="media" directory="site" />
 			</fieldset>
             <fieldset
 				name="advanced">
